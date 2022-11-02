@@ -29,6 +29,7 @@
             <div class="col-4">
                 <a class="nav-link" href={{url_for("tema", tema_arg=tema["tema_id"]) }}>
                     <h2 class="text-center">{{tema["nome"]}}</h2>
+                    <p class="tema-descricao">{{tema["descricao"]}}</p>
                     <img class="img-thumbnail" src={{ url_for("static", filename=tema["foto"]) }} />
                 </a>
             </div>

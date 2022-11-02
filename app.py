@@ -6,9 +6,20 @@ app = Flask(__name__)
 
 
 temas = {
-    "empoderamento": {"nome":"Empoderamento"},
-    "infantil": {"nome":"Infantil"},
-    "eventos": {"nome":"Eventos"},
+    "empoderamento": {
+        "nome":"Empoderamento", 
+        "descricao": """
+        Atitude. Carisma. Vontade de viver. 
+        Capture esse momento do tempo. 
+        Mostre a sua energia para o mundo e prove para o que veio"""},
+    "infantil": {"nome":"Infantil",
+    "descricao": """Anjinho que está crescendo ou anjinho que vai nascer.
+    Seu amor vai ser o mesmo para sempre. 
+    Que tal guardar uma recordação?"""},
+    "eventos": {"nome":"Eventos",
+    "descricao": """Momentos felizes custam pra acontecer e acabam. 
+    Mas a memória nunca vai esquecer o que é guardado para sempre nos corações.
+    Fotografamos esse momento único, seu sentimento sempre poderá ser resgatado"""}
 }
 
 @app.route("/", methods=["GET"])

@@ -49,3 +49,8 @@ body {
 .contato-direto-item{
     margin-bottom: 10px;
 }
+.tema-descricao{
+    padding: 0 30px;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
