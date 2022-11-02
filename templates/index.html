@@ -38,6 +38,10 @@
         .row-class {
             margin-top: 10px;
         }
+        
+        .fotografa-img{
+            width: 20em;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -89,10 +93,9 @@
             </div>
 
             <div class="col-md-2 offset-4 ">
-                <div class="card" style="width: 18rem; ">
-                    <img class="card-img-top" src={{ url_for("static", filename="fotografa.png" )}}
+                <div >
+                    <img class="rounded-circle fotografa-img" src={{ url_for("static", filename="fotografa.png" )}}
                         alt="Card image cap">
-
                 </div>
             </div>
         </div>

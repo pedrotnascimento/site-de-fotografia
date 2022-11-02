@@ -38,6 +38,10 @@
         .row-class {
             margin-top: 10px;
         }
+
+        .fotografa-img {
+            width: 20em;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -59,13 +63,13 @@
                         <a class="nav-link" href={{ url_for("home") }}>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for("tema", tema_arg="empoderamento") }}">Empoderamento</a>
+                        <a class="nav-link" href={{ url_for("tema", tema_arg="empoderamento" ) }}>Empoderamento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for("tema", tema_arg="infantil") }}">Infantil</a>
+                        <a class="nav-link" href={{ url_for("tema", tema_arg="infantil" ) }}>Infantil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for("tema", tema_arg="eventos") }}">Eventos</a>
+                        <a class="nav-link" href={{ url_for("tema", tema_arg="eventos" ) }}>Eventos</a>
                     </li>
                 </ul>
             </div>
@@ -88,10 +92,9 @@
             </div>
 
             <div class="col-md-2 offset-4 ">
-                <div class="card" style="width: 18rem; ">
-                    <img class="card-img-top" src={{ url_for("static", filename="fotografa.png" )}}
-                        alt="Card image cap">
-
+                <div>
+                    <img class="rounded-circle fotografa-img" src={{ url_for("static", filename="fotografa.png" )}}
+                        alt="Card image cap" />
                 </div>
             </div>
         </div>
