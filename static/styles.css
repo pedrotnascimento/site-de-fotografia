@@ -1,6 +1,7 @@
 body {
     background-color: rgb(15, 15, 15);
     color: white;
+    letter-spacing: 3px;
 }
 
 .logo-header {
@@ -42,6 +43,8 @@ body {
 .contato-direto{
     position:fixed;
     right: 10px;
+    bottom: 10px;
+    letter-spacing: 1px;
 }
 .contato-direto-item{
     margin-bottom: 10px;
