@@ -1,20 +1,28 @@
 from flask import Flask, render_template,url_for, escape
 from os import getcwd, listdir
+from copy import copy
 
 app = Flask(__name__) 
 
 
 temas = {
-    "empoderamento": "Empoderamento",
-    "infantil": "Infantil",
-    "eventos": "Eventos",
+    "empoderamento": {"nome":"Empoderamento"},
+    "infantil": {"nome":"Infantil"},
+    "eventos": {"nome":"Eventos"},
 }
 
 @app.route("/", methods=["GET"])
 @app.route("/home", methods=["GET"])
 def home():    
-    arquivos = pegar_imagens_do_tema("infantil")
-    return render_template("index.html",fotos=arquivos)
+    temas_copy = copy(temas)
+    temas_list = []
+    for tema in temas_copy:
+        arq = pegar_imagens_do_tema(tema)
+        temas_copy[tema]["foto"] = arq[0]
+        temas_copy[tema]["tema_id"] = tema
+        temas_list.append(temas_copy[tema])
+    
+    return render_template("index.html",temas=temas_list)
 
 @app.route("/tema/<tema_arg>", methods=["GET"])
 def tema(tema_arg=None):    
@@ -36,7 +44,7 @@ def pegar_arquivos_na_pasta(tema):
     return arquivos
 
 def pegar_nome_para_display(tema):
-    return temas[tema]
+    return temas[tema]["nome"]
     
 if __name__ == "__main__":
     app.run(debug=True)

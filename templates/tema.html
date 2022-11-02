@@ -28,7 +28,8 @@
         <h1>Sessão: {{tema_display}}</h1>
         <div class="row ">
             {% for foto in fotos %}
-            <div class="col-4 row-class"> <img class="img-thumbnail" src={{ url_for("static", filename=foto) }} />
+            <div class="col-4 row-class">
+                 <img class="img-thumbnail" src={{ url_for("static", filename=foto) }} />
             </div>
             {% endfor %}
         </div>

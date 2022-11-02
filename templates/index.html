@@ -23,7 +23,18 @@
     <hr class="my-4">
     {{apresentacao()}}
     {{contato_direto()}}
-
+    <div class="container">
+        <div class="row row-class justify-content-center">
+            {% for tema in temas %}
+            <div class="col-4 ">
+                <a href={{url_for("tema", tema_arg=tema["tema_id"]) }}>
+                    <h2 class="text-center">{{tema["nome"]}}</h2>
+                    <img class="img-thumbnail" src={{ url_for("static", filename=tema["foto"]) }} />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 
 
     {{footer()}}
