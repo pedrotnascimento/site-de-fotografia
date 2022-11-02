@@ -9,9 +9,13 @@ body {
     margin-top: 20px;
 }
 
-.content {
+.container-custom {
     margin-top: 50px;
     margin-left: 20px;
+}
+
+.container-categorias {
+    margin-top: 50px;
 }
 
 .nav-link {
@@ -27,7 +31,7 @@ body {
     margin-top: 50px;
 }
 
-.row-class {
+.row-custom {
     margin-top: 10px;
 }
 

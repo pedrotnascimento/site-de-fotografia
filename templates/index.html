@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="static/styles.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" container-custom="width=device-width, initial-scale=1">
     <style>
 
     </style>
@@ -23,11 +23,11 @@
     <hr class="my-4">
     {{apresentacao()}}
     {{contato_direto()}}
-    <div class="container">
-        <div class="row row-class justify-content-center">
+    <div class="container container-categorias">
+        <div class="row row-custom justify-content-center">
             {% for tema in temas %}
-            <div class="col-4 ">
-                <a href={{url_for("tema", tema_arg=tema["tema_id"]) }}>
+            <div class="col-4">
+                <a class="nav-link" href={{url_for("tema", tema_arg=tema["tema_id"]) }}>
                     <h2 class="text-center">{{tema["nome"]}}</h2>
                     <img class="img-thumbnail" src={{ url_for("static", filename=tema["foto"]) }} />
                 </a>
