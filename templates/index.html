@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="static/styles.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <style>
+        
+    </style>
 </head>
 
 <body>
-    {% from 'header.html' import header %}
-    {% from 'apresentacao.html' import apresentacao %}
-    {% from 'tema.html' import tema %}
+    {% from 'macros/header.html' import header %}
+    {% from 'macros/apresentacao.html' import apresentacao %}
+    {% from 'macros/contato-direto.html' import contato_direto %}
 
     {{header()}}
     <hr class="my-4">
     {{apresentacao()}}
-    
+    {{contato_direto ()}}
+
     
 </body>
 

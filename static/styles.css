@@ -34,3 +34,11 @@ body {
 .fotografa-img {
     width: 20em;
 }
+
+.contato-direto{
+    position:fixed;
+    right: 10px;
+}
+.contato-direto-item{
+    margin-bottom: 10px;
+}
