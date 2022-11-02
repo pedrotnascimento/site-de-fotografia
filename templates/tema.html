@@ -15,6 +15,7 @@
     {% from 'macros/header.html' import header %}
     {% from 'macros/apresentacao.html' import apresentacao %}
     {% from 'macros/contato-direto.html' import contato_direto %}
+    {% from 'macros/footer.html' import footer %}
 
     {{header()}}
     <hr class="my-4">
@@ -32,7 +33,7 @@
             {% endfor %}
         </div>
     </div>
-
+    {{footer()}}
 </body>
 
 </html>
